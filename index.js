@@ -1,4 +1,4 @@
-const config = require("./config.json");
+const keepAlive = require("./keepAlive.js");
 const discord = require("discord.js");
 const fs = require("node:fs");
 const path = require("node:path");
@@ -46,4 +46,4 @@ client.on("interactionCreate", async (interaction) => {
   }
 });
 
-client.login(config.bot_token);
+client.login(process.env.bot_token);
